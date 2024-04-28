@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Notes Sharing Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #8E44AD, #FFA500, #FF5733);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
+    }
+    .navbar {
+      background-color: #000 !important;
+    }
+    .navbar-brand img {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="#">
+        <img src="https://ieee.kongu.edu/images/image_02.jpg" alt="Company Logo" width="30" height="30" class="d-inline-block align-text-top">
+        KEC
+      </a>
+      <a class="btn btn-warning" th:href="@{/view}" role="button">Get Started</a>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+      <h1 class="display-4">Welcome to KEC Notes Sharing Platform</h1>
+      <p class="lead">Introducing KEC Notes Sharing Platform, your ultimate destination for seamless knowledge exchange and collaborative learning. Designed with simplicity and efficiency in mind, KEC offers a revolutionary platform for students, educators, and knowledge enthusiasts to effortlessly share, discover, and engage with a wealth of educational content. Whether you're seeking to revise for exams, explore new subjects, or simply share your expertise with others, KEC empowers you to connect with a vibrant community of learners worldwide. Join us in revolutionizing the way we learn and share knowledge. Welcome to KEC Notes Sharing Platform, where every note counts towards a brighter future.</p>
+      <a class="btn btn-lg btn-warning" th:href="@{/add}" role="button">Add Notes</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -13,36 +13,37 @@ import java.util.List;
 
 @Controller
 public class NoteController {
-
-    @Autowired
+	@Autowired
     private NoteRepository noteRepository;
 
-    // Handler for GET requests to the root URL ("/")
+    // Handler for GET requests to the home page ("/home")
     @GetMapping("/")
-    public String index(Model model) {
-        // Retrieve all notes from the database
-        List<Note> notes = noteRepository.findAll();
-        // Add the list of notes to the model
-        model.addAttribute("notes", notes);
-        return "index"; // Return the name of the HTML template to render
+    public String home() {
+        return "home"; // Return the name of the HTML template for the home page
+    }
+
+    // Handler for GET requests to add a new note ("/add")
+    @GetMapping("/add")
+    public String addForm() {
+        return "index"; // Return the name of the HTML template for adding a note
     }
 
     // Handler for POST requests to add a new note ("/add")
-    @PostMapping("/add")
+    @PostMapping("/add2")
     public String add(Note note) {
         // Save the new note to the database
         noteRepository.save(note);
-        // Redirect to the root URL to display all notes
+        // Redirect to the home page
         return "redirect:/";
     }
 
     // Handler for GET requests to view all notes ("/view")
     @GetMapping("/view")
     public String viewAll(Model model) {
-        // Retrieve all notes from the database
-        List<Note> notes = noteRepository.findAll();
+    	List<Note> notes = noteRepository.findAll();
         // Add the list of notes to the model
         model.addAttribute("notes", notes);
         return "view"; // Return the name of the HTML template to render
+   
     }
 }
