@@ -101,7 +101,7 @@ This project uses **Spring Data JPA** as the ORM (Object Relational Mapping) fra
 
 ## Contributors
 
-- **[Sadhanand S S](https://github.com/Sadhanand-SS)**
+- [Sadhanand S S](https://github.com/Sadhanand-SS)
 
 ## Feedback
 
